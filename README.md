@@ -1,8 +1,8 @@
 These are just some scripts I've been using to automate gcloud server creation. They are
 really just for conveniece, because gcloud commands can get very verbose! They are really very simple,
 and I have tried my best to keep variables at the top of each file to change common parameters
-Just read the scripts before you run them! You can change the zone and machine types and all that in
-the scripts. Just about the only options they take are instance and image names.
+Just read the scripts before you run them! You can change the zone and machine types in
+the scripts. Generally, the only options they take are instance and image names.
 
 The scripts for starting instances default to preemptible instances. My main use case is starting up 
 cloud GPU servers on the cheap for machine learning studies. I generally keep a small persistent disk
@@ -48,4 +48,4 @@ gcloud compute images create <image-name> --source-disk <instance-name>
 
 And now you are ready to start on demand docker instances with GPU support!
 
-I included a couple more scripts `start-gpu-instance.sh` and `start-cpu-instance.sh` as examples. They just start a preemptible instance from an image file and then keep checking ssh until the instance is started. I generally have a persisten partition
+I included a couple more scripts `start-gpu-instance.sh` and `start-cpu-instance.sh` as examples. They just start a preemptible instance from an image file and then keep checking ssh until the instance is started. I generally have a persistent partition that I store my data on and attach to the instance when it starts up.
