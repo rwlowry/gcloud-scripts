@@ -1,4 +1,9 @@
-These are just some scripts I've been using to automate gcloud server creation.
+These are just some scripts I've been using to automate gcloud server creation. They are
+really just for conveniece, because gcloud commands can get very verbose! They are really very simple,
+and I have tried my best to keep variables at the top of each file to change common parameters.
+
+Just read the scripts before you run them! You can change the zone and machine types and all that in
+the scripts. Just about the only options they take are instance names.
 
 ## Creating a server image:
 
@@ -15,10 +20,9 @@ gcloud compute ssh instance
 Then on the instance:
 
 ````
-sh ./centos7-cuda.sh
+sh ./centos7-cuda-drivers.sh
 sh ./centos7-docker-ce.sh
 sh ./centos7-nvidia-docker.sh
-
 ````
 
 You now have system capable of running GPU enabled docker images! You can test this 
