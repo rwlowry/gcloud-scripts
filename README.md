@@ -5,6 +5,9 @@ and I have tried my best to keep variables at the top of each file to change com
 Just read the scripts before you run them! You can change the zone and machine types and all that in
 the scripts. Just about the only options they take are instance names.
 
+The scripts for starting instances default to preemptible instances (because why else would you need 
+scripts to do it???)
+
 ## Creating a server image:
 
 `start-image-host.sh` is a basic script to create an instance from public base

@@ -13,7 +13,7 @@ MACHINE_TYPE='n1-standard-4'
 ZONE='us-central1-c'
 DISK_SIZE=64GB
 
-echo Creating instance $1
+echo Creating instance ${INSTANCE_NAME}
 gcloud compute instances create ${INSTANCE_NAME} \
 	--machine-type=${MACHINE_TYPE} --image ${IMAGE_NAME} --zone=${ZONE} \
 	--boot-disk-size=${DISK_SIZE} \
