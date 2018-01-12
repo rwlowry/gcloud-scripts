@@ -18,7 +18,7 @@ echo Creating instance ${INSTANCE_NAME} ...
 gcloud beta compute instances create ${INSTANCE_NAME} --accelerator=${ACCELERATOR} \
 	--machine-type=${MACHINE_TYPE} --image ${IMAGE_NAME} --zone=${ZONE} \
 	--boot-disk-size=${DISK_SIZE} \
-	--preemtible --maintenance-policy=TERMINATE
+	--preemptible --maintenance-policy=TERMINATE
 
 echo 'Waiting for instance ...'
 until gcloud compute --verbosity error ssh $1 -- echo ' instance started'; do
